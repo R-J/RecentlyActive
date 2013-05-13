@@ -32,8 +32,10 @@ $PluginInfo['RecentlyActive'] = array(
 class RecentlyActivePlugin extends Gdn_Plugin {
   
   public function Base_Render_Before($Sender) {
-    include_once(PATH_PLUGINS.DS.'RecentlyActive'.DS.'class.recentlyactivemodule.php');
-    $RecentlyActiveModule = new RecentlyActiveModule($Sender);
-    $Sender->AddModule($RecentlyActiveModule);
+	// only add the module if we are in the panel asset and NOT in the dashboard
+    if(GetValue('Panel',$Sender->Assets) && $Sender->MasterView != 'admin') {
+	  $RecentlyActiveModule = new RecentlyActiveModule($Sender);
+      $Sender->AddModule($RecentlyActiveModule);
+	}
   }
 }
