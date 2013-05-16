@@ -21,8 +21,11 @@ class RecentlyActiveModule extends Gdn_Module {
   
   // Loop through the array of user objects
   foreach ($RecentlyActiveUsers as $User) {
-    echo '<li><strong>'.UserAnchor($User, 'UserLink').'</strong>';
-    echo  Gdn_Format::Seconds($User->DateLastActive).'</li>';
+   if ($User->Email != "") // invalid or anonymous users
+   {
+    echo '<li><strong>'.UserAnchor($User, 'UserLink', '10').'</strong>';
+    echo Gdn_Format::Seconds($User->DateLastActive).'</li>';
+   }
   }
   echo '</ul></div>';
   }
