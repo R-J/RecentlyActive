@@ -168,7 +168,7 @@ We now will iterate through all recently active users and show them in a list. T
 
 The function "UserAnchor" is coded in library/core/functions.render.php "*Takes a user object, and writes out an achor of the user's name to the user's profile*". It can do more. It can add a class to the link "in this case, I've provided the class "UserLink" to every line. 
 
-### UserAnchor($User, 'classname'); gets expanded to <a href="/profile/1/administrator" class="classname">administrator</a>
+### UserAnchor($User, 'classname'); gets expanded to &lt;a href="/profile/1/administrator" class="classname">administrator&lt;/a>
 
 Next line shows the DateLastActive value "*in a human-readable way*". The function is provided by the Gdn_Format class, which you can find here: library/core/class.format.php. Going through this file, you'll find out that Gdn_Format provides several useful functions to convert nearly anything you need when working with Garden.
 For example there are functions for converting markdown or bbcode to html, unicode to ascii and some very nifty array conversion functions.
