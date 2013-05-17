@@ -278,5 +278,9 @@ $Sender called our plugin and $Sender has an asset called "Panel". So $Sender is
 
 If you want to change the order of the displayed modules, you'll have to change the config file. This is not as easy as described in the wiki (and so I will not give you the link this time), because the order is defined in a serialized string. Search for online tools that help you serializing and unserializing arrays if you need to change the order. 
 
-That's it. Enjoy exploring Gardens functionalities and if you've got ideas for useful sidepanel modules, just try to realize them!
+We're done! Enjoy exploring Gardens functionalities and if you've got ideas for useful sidepanel modules, just try to realize them!
+
+
+
+Please thank [hgtonight](http://vanillaforums.org/profile/38268/hgtonight) for this plugin because he put the logic in the skeleton that I've started with. Many thanks from me for that! Without your help I would have had to spent more time in finding the answers to my questions and I thank I wouldn't have taken the time afterwards to write this tutorial.
 
